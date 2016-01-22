@@ -71,7 +71,9 @@ public class ValuesSourceParser<VS extends ValuesSource> {
     }
 
     public static class Input {
-        private String field = null;
+        /* //FX change private to public */
+        public String field = null;
+
         private Script script = null;
         @Deprecated
         private Map<String, Object> params = null; // TODO Remove in 3.0
