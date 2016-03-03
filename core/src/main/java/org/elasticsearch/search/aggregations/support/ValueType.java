@@ -73,13 +73,6 @@ public enum ValueType {
             return true;
         }
     },
-    //FX, it seems ok not to add the following code for aggregation
-    ESRIGEOPOINT("esri_geo_point", ValuesSource.GeoPoint.class, IndexGeoPointFieldData.class, ValueFormat.RAW) {
-        @Override
-        public boolean isGeoPoint() {
-            return true;
-        }
-    },
     GEOPOINT("geo_point", ValuesSource.GeoPoint.class, IndexGeoPointFieldData.class, ValueFormat.RAW) {
         @Override
         public boolean isGeoPoint() {

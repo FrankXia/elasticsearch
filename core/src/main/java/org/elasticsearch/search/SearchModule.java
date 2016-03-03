@@ -391,7 +391,7 @@ public class SearchModule extends AbstractModule {
         SumBucketPipelineAggregator.registerStreams();
         StatsBucketPipelineAggregator.registerStreams();
         ExtendedStatsBucketPipelineAggregator.registerStreams();
-        PercentilesBucketPipelineAggregator.registerStreams();        
+        PercentilesBucketPipelineAggregator.registerStreams();
         MovAvgPipelineAggregator.registerStreams();
         CumulativeSumPipelineAggregator.registerStreams();
         BucketScriptPipelineAggregator.registerStreams();

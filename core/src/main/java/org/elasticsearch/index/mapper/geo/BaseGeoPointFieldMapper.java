@@ -259,11 +259,9 @@ public abstract class BaseGeoPointFieldMapper extends FieldMapper implements Arr
         protected MappedFieldType latFieldType;
         protected MappedFieldType lonFieldType;
 
-        //FX, added protected
-        protected GeoPointFieldType() {}
+        GeoPointFieldType() {}
 
-        //FX, added protected
-        protected GeoPointFieldType(GeoPointFieldType ref) {
+        GeoPointFieldType(GeoPointFieldType ref) {
             super(ref);
             this.geoHashFieldType = ref.geoHashFieldType; // copying ref is ok, this can never be modified
             this.geoHashPrecision = ref.geoHashPrecision;

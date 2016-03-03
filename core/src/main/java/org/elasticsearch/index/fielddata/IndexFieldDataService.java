@@ -74,10 +74,6 @@ public class IndexFieldDataService extends AbstractIndexComponent {
                 .put("int", new PackedArrayIndexFieldData.Builder().setNumericType(IndexNumericFieldData.NumericType.INT))
                 .put("long", new PackedArrayIndexFieldData.Builder().setNumericType(IndexNumericFieldData.NumericType.LONG))
                 .put("geo_point", new GeoPointArrayIndexFieldData.Builder())
-
-                //FX
-                .put("esri_geo_point", new GeoPointArrayIndexFieldData.Builder())
-
                 .put(ParentFieldMapper.NAME, new ParentChildIndexFieldData.Builder())
                 .put(IndexFieldMapper.NAME, new IndexIndexFieldData.Builder())
                 .put("binary", new DisabledIndexFieldData.Builder())
@@ -93,10 +89,6 @@ public class IndexFieldDataService extends AbstractIndexComponent {
                 .put("int", new DocValuesIndexFieldData.Builder().numericType(IndexNumericFieldData.NumericType.INT))
                 .put("long", new DocValuesIndexFieldData.Builder().numericType(IndexNumericFieldData.NumericType.LONG))
                 .put("geo_point", new AbstractGeoPointDVIndexFieldData.Builder())
-
-                //FX
-                .put("esri_geo_point", new AbstractGeoPointDVIndexFieldData.Builder())
-
                 .put("binary", new BytesBinaryDVIndexFieldData.Builder())
                 .put(BooleanFieldMapper.CONTENT_TYPE, new DocValuesIndexFieldData.Builder().numericType(IndexNumericFieldData.NumericType.BOOLEAN))
                 .immutableMap();
@@ -133,12 +125,6 @@ public class IndexFieldDataService extends AbstractIndexComponent {
                 .put(Tuple.tuple("geo_point", ARRAY_FORMAT), new GeoPointArrayIndexFieldData.Builder())
                 .put(Tuple.tuple("geo_point", DOC_VALUES_FORMAT), new AbstractGeoPointDVIndexFieldData.Builder())
                 .put(Tuple.tuple("geo_point", DISABLED_FORMAT), new DisabledIndexFieldData.Builder())
-
-                //FX
-                .put(Tuple.tuple("esri_geo_point", ARRAY_FORMAT), new GeoPointArrayIndexFieldData.Builder())
-                .put(Tuple.tuple("esri_geo_point", DOC_VALUES_FORMAT), new AbstractGeoPointDVIndexFieldData.Builder())
-                .put(Tuple.tuple("esri_geo_point", DISABLED_FORMAT), new DisabledIndexFieldData.Builder())
-
 
                 .put(Tuple.tuple("binary", DOC_VALUES_FORMAT), new BytesBinaryDVIndexFieldData.Builder())
                 .put(Tuple.tuple("binary", DISABLED_FORMAT), new DisabledIndexFieldData.Builder())
